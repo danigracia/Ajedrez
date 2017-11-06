@@ -60,6 +60,7 @@
 						$alfil = array($fila,$colu);
 						
 					}
+					echo $fila.$colu;
 					print_r($alfil);
 					
 					$_SESSION["alfil"] = $alfil;
