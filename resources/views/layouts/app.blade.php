@@ -8,7 +8,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'ProyectoXat') }}</title>
+    <title>{{ config('app.name', 'Ajedrez') }}</title>
+
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -38,74 +39,15 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            input {
+                text-align: center;
+            }
         </style>
-    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-        <script type="text/javascript">
-            $(function(){
-              $(document).ready(ocultar);
-              $('a[name=btnLogin]').hover((function() {
-                    aparecer("a[name=btnLogin]");
-              }));
-
-              $('a[name=btnRegistro]').hover((function() {
-                    aparecer("a[name=btnRegistro]");
-              }));
-
-              $('form[name=formRegistro]').hover((function() {
-                    mostrarDeslizando("button[name=btnEnvio]");
-              }));
-              /*$('button[name=btnRegistro]').click(aparecer);
-              $('button[name=btnDesvanecer]').click(desvanecer);
-              $('button[name=btnDeslizarMostrar]').click(mostrarDeslizando);
-              $('button[name=btnDeslizarOcultar]').click(ocultarDeslizando);*/
-            });
-              function mostrar(elemento){
-                $(elemento).show();
-              }
-
-              function ocultar(){
-                $("button[name=btnEnvio]").hide();
-              }
-
-              function aparecer(elemento){
-                $(elemento).fadeToggle(1500);
-              }
-
-              function mostrarDeslizando(elemento){
-                $(elemento).slideDown(1000);
-              }
-
-              function ocultarDeslizando(){
-                $("p").slideUp(1000);
-              }
-        </script>
 </head>
 <body style="background-color: #cefffd;">
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    @guest
-                        <a class="navbar-brand hvr-pulse-grow" href="{{ url('/') }}">
-                            {{ config('app.name', 'ProyectoXat') }}
-                        </a>
-                    @else
-                        <a class="navbar-brand hvr-pulse-shrink" href="{{ url('/home') }}">
-                            {{ config('app.name', 'ProyectoXat') }}
-                        </a>
-                    @endguest
-                </div>
-
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
@@ -149,5 +91,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
 </body>
 </html>
